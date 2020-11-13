@@ -1,6 +1,7 @@
 package it.unibo.oop.lab05.ex1;
 
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Example class using {@link Set}.
@@ -34,5 +35,32 @@ public final class UseSet {
          * 
          * 6) Verifies if all the numbers left in the set are even
          */
+    	
+    	//1
+    	final var set = new TreeSet<String>();
+    	
+    	//2
+    	for (int i = 1; i <= 20; i++) {
+    		set.add(String.valueOf(i));
+    	}
+
+    	//3
+    	System.out.println(set);
+
+    	//4
+    	for (int i = 3; i < 20; i=i+3) {
+    		set.remove(String.valueOf(i));
+    	}
+
+    	//5
+    	for (String elem : set) {
+    		System.out.println(elem);
+    	}
+    	
+    	//6
+    	for (String elem : set) {
+    		System.out.println(Integer.valueOf(elem) % 2 == 0);
+    	}
+ 
     }
 }
